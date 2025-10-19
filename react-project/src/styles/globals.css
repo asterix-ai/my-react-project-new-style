@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply font-sans antialiased bg-gray-50 text-gray-900 dark:bg-gray-950 dark:text-gray-100 transition-colors duration-300;
+  }
+  /* Custom scrollbar for better aesthetics */
+  body::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #a78bfa; /* purple-400 */
+    border-radius: 4px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background-color: #e0e7ff; /* indigo-100 */
+    border-radius: 4px;
+  }
+
+  .dark body::-webkit-scrollbar-thumb {
+    background-color: #8b5cf6; /* purple-500 */
+  }
+
+  .dark body::-webkit-scrollbar-track {
+    background-color: #1f2937; /* gray-800 */
+  }
+}
+
+/* Additional utilities or overrides if needed */
+.bg-gradient-to-r.from-indigo-500.via-purple-500.to-pink-500 {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.text-transparent {
+  color: transparent;
+}
